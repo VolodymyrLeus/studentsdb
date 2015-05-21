@@ -1,3 +1,4 @@
+{% load static from staticfiles %}
 <!DOCTYPE html>
 <html lang="uk">
     <head>
@@ -12,7 +13,7 @@
         <link rel="stylesheet"
         href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
         <style type="text/css"></style>
-	<link rel="stylesheet" href="./css/main.css">
+	<link rel="stylesheet" href="/static/css/main.css">
     </head>
     <body>
         <!--Start Conteiner-->
@@ -72,7 +73,7 @@
 			<tbody>
 				<tr>
 				<td>1</td>
-				<td><img height="30" width="30" src="./img/image1.png" class="img-circle"/></td>
+				<td><img height="30" width="30" src="/static/img/image1.png" class="img-circle"/></td>
 				<td><a title="Редагувати" href="{% url "students_edit" 1 %}">Корост</a></td>
 				<td><a title="Редагувати" href="{% url "students_edit" 1 %}">Андрій</a></td>
 				<td>2123</td>
@@ -99,7 +100,7 @@
 				<!--Stdent #2-->
 				<tr>
 				<td>2</td>
-				<td><img height="30" width="30" src="./img/garage_sale_t.jpg" class="img-circle"/></td>
+				<td><img height="30" width="30" src="/static/img/garage_sale_t.jpg" class="img-circle"/></td>
 				<td><a title="Редагувати" href="{% url "students_edit" 2 %}">Леус</a></td>
 				<td><a title="Редагувати" href="{% url "students_edit" 2 %}">Володимир</a></td>
 				<td>254</td>
@@ -126,7 +127,7 @@
 				<!--Stdent #3-->
 				<tr>
 				<td>3</td>
-				<td><img height="30" width="30" src="./img/garage-sale_c1.jpg" class="img-circle"/></td>
+				<td><img height="30" width="30" src="/static/img/garage-sale_c1.jpg" class="img-circle"/></td>
 				<td><a title="Редагувати" href="{% url "students_edit" 3 %}">Притула</a></td>
 				<td><a title="Редагувати" href="{% url "students_edit" 3 %}">Анастасія</a></td>
 				<td>253</td>
