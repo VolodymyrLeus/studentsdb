@@ -1,66 +1,9 @@
-<!DOCTYPE html>
-<html lang="uk">
-	<head>
-		<meta charset ="UTF-8"/> 
-		<title>Сервіс Обліку Студентів</title>
-		<meta name="descption" 
-			value = "Відвідування Студентами Навчального Закладу"/>
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-
-		<!-- include Styles -->
-        
-        <link rel="stylesheet"
-        href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-        
-
-        <link rel="stylesheet" href="./css/main.css">
-	</head>
-	<body>
-	<!-- star Conteiner-->
-
-	<div class="conteiner">
-		
-		<!-- Start Header-->
-		<div class="row" id="header">
-
-		<!--logo-->
-        	<div class="col-xs-8" id="logo">
-                <h1>Сервіс Обліку Студентів<h1>
-            </div>
-
-        <!--Group Selector-->
-            <div class="col-xs-4" id="group-selector">
-				<strong>Група:</strong>
-				<select>
-					<option value="">Усі Студенти</option>
-					<option value="">МтМ - 21, Леус Володимир (No 254)</option>
-					<option value="">МтМ - 22, Притула Анастасія (No 2123)</option>
-           			<option value="">МтМ - 23, Віталій Подоба (No 2123)</option>
-				</select>
-	    	</div>
-	    </div>
-	    <!--End Header-->
-
-	    <!--Start SubHeader-->
-        <div class="row" id="sub-header">
-            <div class="col-xs-12">
-                <ul class="nav nav-tabs" role="tablist">
-			<li role="presentation" class="active"><a href="#">Студенти</a></li>
-			<li role="presentation"><a href="journal">Відвідування</a></li>
-			<li role="presentation"><a href="#">Групи</a></li>
-			</ul>
-            </div>
-        </div>
-         <!-- End SubHeader -->
-
-         <!-- Start Main Page Content --> 
-         	<div class="row" id="content-columns">
-            	<div class="col-xs-12" id="content-column">
-                
-                <!-- Status Message -->
-					<div class="alert alert-warning">Зміни скасовано.</div>
-						<h3>Облік Відвідування</h3>
-				
+{% extends "students/base.html"%}
+{% load static from staticfiles %}
+{% block meta_title %} Студенти {% endblock meta_title %}
+{% block title %} Облік Відвідування {% endblock title %}        
+{% block content %}        
+							
 			<!-- Mounth-->	
 		    	<div class="row" id="content-columns">
 		    		<div class="col-md-3"> </div>
@@ -72,7 +15,7 @@
 
   			<!-- Start calendar-->
   				<table class="table table-hover table-striped">
-  					<head>
+  					<thead>
   						<tr>
 							<th><a href="">No</a></th>
 							<th>Студент</th>
@@ -84,7 +27,7 @@
 							<th>Пн 6</th>
 							<th>ВТ 7</th>
 						</tr>	
-  					</head>
+  					</thead>
   					<tbody>
   						<tr>
   							<div class="checkbox">
@@ -126,24 +69,8 @@
   						    </div>
   						</tr>
   					</tbody>
+            </table>
   				
   			<!-- End Main Page Content -->
-
-  			<!-- Start Footer -->
-        		<div class="row" id="footer">
-            		<div class="col-xs-12">&copy; 2015 Сервіс Обліку Студентів</div>
-        		</div>
-        	<!-- End Footer -->
-        	</div>
-			</div>
-		</div>
-
-	<!-- End conteiner-->
-
-	<!-- Javascripts Section -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.js">
-        </script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js">
-        </script>
-	</body>
-</html>
+{% endblock content %}
+  			
